@@ -16,6 +16,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>20-ea+4</version>
@@ -37,6 +42,16 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.2.0.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
         </dependency>
     </dependencies>
 
@@ -61,7 +76,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.hibernatejavafxultimate/com.example.hibernatejavafxultimate.HelloApplication
+                                com.example.hibernatejavafxultimate/com.example.javafx.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
