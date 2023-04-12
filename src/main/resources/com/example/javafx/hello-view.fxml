@@ -1,16 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.javafx.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+<VBox alignment="CENTER" prefHeight="360.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.HelloController">
+   <children>
+      <Pane prefHeight="364.0" prefWidth="480.0">
+         <children>
+            <TabPane prefHeight="360.0" prefWidth="480.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Add User">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="saveUserBtn" layoutX="380.0" layoutY="274.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="77.0" text="Save" />
+                              <TextField fx:id="emailTxtField" layoutX="152.0" layoutY="135.0" prefHeight="30.0" prefWidth="210.0" AnchorPane.topAnchor="135.0" />
+                              <TextField fx:id="lastNameTxtField" layoutX="152.0" layoutY="85.0" prefHeight="30.0" prefWidth="210.0" AnchorPane.topAnchor="85.0" />
+                              <TextField fx:id="nameTxtField" layoutX="152.0" layoutY="35.0" prefHeight="30.0" prefWidth="210.0" AnchorPane.topAnchor="35.0" />
+                              <TextField fx:id="phoneTxtField" layoutX="152.0" layoutY="185.0" prefHeight="30.0" prefWidth="210.0" AnchorPane.topAnchor="185.0">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets></TextField>
+                              <Label layoutX="42.0" layoutY="35.0" prefHeight="30.0" prefWidth="64.0" text="First Name" />
+                              <Label layoutX="42.0" layoutY="85.0" prefHeight="30.0" prefWidth="64.0" text="Last Name" />
+                              <Label alignment="CENTER" layoutX="28.0" layoutY="135.0" prefHeight="30.0" prefWidth="84.0" text="E-mail" textAlignment="CENTER" />
+                              <Label layoutX="32.0" layoutY="185.0" prefHeight="30.0" prefWidth="84.0" text="Phone Number" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Add Subject">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="saveSubjectBtn" layoutX="380.0" layoutY="274.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="77.0" text="Save" />
+                                <TextField fx:id="masterDataTxtField" layoutX="152.0" layoutY="85.0" prefHeight="30.0" prefWidth="210.0" AnchorPane.topAnchor="85.0" />
+                                <TextField fx:id="subjectTitleTxtField" layoutX="152.0" layoutY="35.0" prefHeight="30.0" prefWidth="210.0" AnchorPane.topAnchor="35.0" />
+                                <TextField fx:id="roomTxtField" layoutX="152.0" layoutY="135.0" prefHeight="30.0" prefWidth="210.0" AnchorPane.topAnchor="135.0" />
+                                <Label layoutX="42.0" layoutY="35.0" prefHeight="30.0" prefWidth="64.0" text="Title" />
+                                <Label layoutX="42.0" layoutY="85.0" prefHeight="30.0" prefWidth="64.0" text="Master" />
+                              <Label layoutX="42.0" layoutY="135.0" prefHeight="30.0" prefWidth="64.0" text="Room" />
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Manage users">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+                <Tab text="Grade Book">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                      </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children></Pane>
+   </children>
 </VBox>
